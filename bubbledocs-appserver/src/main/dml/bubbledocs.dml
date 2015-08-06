@@ -1,0 +1,156 @@
+package bubbledocs.domain;
+
+class BubbleDocs {
+	int docAmmount;
+}
+
+class User {
+	String username;
+	String name;
+	String password;
+}
+
+class Document {
+	int id;
+	String name;
+	String date;
+}
+
+class SpreadSheet extends Document{
+	int lines;
+	int columns;
+}
+
+class Cell {
+	int line;
+	int column;
+	boolean isProtected;
+}
+
+class Interval;
+
+class Content;
+
+class Literal extends Content {
+	int value;
+}
+
+class Reference extends Content {
+	int line;
+	int column;
+}
+
+class Function extends Content;
+
+class BinaryFunction extends Function;
+
+class IntervalFunction extends Function;
+
+class Add extends BinaryFunction;
+
+class Sub extends BinaryFunction;
+
+class Mul extends BinaryFunction;
+
+class Div extends BinaryFunction;
+
+class Avg extends IntervalFunction;
+
+class Prd extends IntervalFunction;
+
+
+
+relation DomainRootHasBubbleDocsApplication {
+	.pt.ist.fenixframework.DomainRoot playsRole root {
+	multiplicity 0..1;
+	}
+	BubbleDocs playsRole bubbledocs {
+		multiplicity 0..1;
+	}
+}
+
+relation BubbleDocsManagesUsers {
+	BubbleDocs playsRole bubbledocs;
+	User playsRole user {
+		multiplicity *;
+	}
+}
+
+relation BubbleDocsManagesDocuments {
+	BubbleDocs playsRole bubbledocs;
+	Document playsRole document {
+		multiplicity *;
+	}
+}
+
+relation UserCanWriteDocuments {
+	User playsRole writeUser {
+		multiplicity *;
+	}
+	Document playsRole writeDoc {
+		multiplicity *;
+	}
+}
+
+relation UserCanReadDocuments {
+	User playsRole readUser {
+		multiplicity *;
+	}
+	Document playsRole readDoc {
+		multiplicity *;
+	}
+}
+
+relation UserOwnsDocument {
+	User playsRole owner;
+	Document playsRole ownedDoc {
+		multiplicity *;
+	}
+}
+
+relation SpreadSheetContainsCells {
+	SpreadSheet playsRole spreadsheet;
+	Cell playsRole cell {
+		multiplicity *;
+	}
+}
+
+relation CellContainsContent {
+	Cell playsRole cell;
+	Content playsRole content;
+}
+
+relation IntervalHasStartCell {
+	Interval playsRole interval {
+		multiplicity *;
+	}
+	Cell playsRole startCell;
+}
+
+relation IntervalHasEndCell {
+	Interval playsRole interval {
+		multiplicity *;
+	}
+	Cell playsRole endCell;
+}
+
+relation BinaryFunctionHasContent1 {
+	BinaryFunction playsRole binaryFunction {
+		multiplicity *;
+	}
+	Content playsRole content1;
+}
+
+relation BinaryFunctionHasContent2 {
+	BinaryFunction playsRole binaryFunction {
+		multiplicity *;
+	}
+	Content playsRole content2;
+}
+
+relation IntervalFunctionHasInterval {
+	IntervalFunction playsRole intervalFunction {
+		multiplicity *;
+	}
+	Interval playsRole interval;
+}
