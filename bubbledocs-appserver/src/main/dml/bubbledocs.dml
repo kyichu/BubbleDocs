@@ -121,28 +121,28 @@ relation CellContainsContent {
 }
 
 relation IntervalHasStartCell {
-	Interval playsRole interval {
+	Interval playsRole intervalStart {
 		multiplicity *;
 	}
 	Cell playsRole startCell;
 }
 
 relation IntervalHasEndCell {
-	Interval playsRole interval {
+	Interval playsRole intervalEnd {
 		multiplicity *;
 	}
 	Cell playsRole endCell;
 }
 
 relation BinaryFunctionHasContent1 {
-	BinaryFunction playsRole binaryFunction {
+	BinaryFunction playsRole binaryFunctionC1 {
 		multiplicity *;
 	}
 	Content playsRole content1;
 }
 
 relation BinaryFunctionHasContent2 {
-	BinaryFunction playsRole binaryFunction {
+	BinaryFunction playsRole binaryFunctionC2 {
 		multiplicity *;
 	}
 	Content playsRole content2;
