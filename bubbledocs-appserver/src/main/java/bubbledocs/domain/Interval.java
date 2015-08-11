@@ -6,4 +6,11 @@ public class Interval extends Interval_Base {
         super();
     }
     
+    public Interval(Cell start, Cell end) {
+    	super();
+    	
+    	setStartCell(start);
+    	setEndCell(end);
+    }
+    
 }

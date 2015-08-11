@@ -79,4 +79,16 @@ public class BubbleDocs extends BubbleDocs_Base {
 		setDocAmmount(getDocAmmount() + 1);
 		doc.setId(getDocAmmount());
 	}
+	
+//	public void delete() {
+//		for (User item : getUserSet()) {
+//			item.delete();
+//		}
+//		
+//		for (Document item : getDocumentSet()) {
+//			item.delete();
+//		}
+//		
+//		deleteDomainObject();
+//	}
 }

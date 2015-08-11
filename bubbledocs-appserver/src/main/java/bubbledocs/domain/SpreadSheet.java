@@ -33,4 +33,12 @@ public class SpreadSheet extends SpreadSheet_Base {
     	
     	return null;
     }
+    
+//    public void delete() {
+//    	for(Cell item : getCellSet()) {
+//    		item.delete();
+//    	}
+//    	
+//    	deleteDomainObject();
+//    }
 }

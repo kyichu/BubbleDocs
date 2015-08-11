@@ -6,4 +6,14 @@ public class Cell extends Cell_Base {
         super();
     }
     
+    public Cell(Content content) {
+    	super();
+    	
+    	setContent(content);
+    }
+    
+//    public int getContentValue() {
+//    	return getContent().getValue()
+//    }
+    
 }
