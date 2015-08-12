@@ -19,6 +19,6 @@ public class UserNotRootException extends Exception {
 
 	    @Override
 	    public String getMessage() {
-	        return "This name " + this.noRootName + " is already being used";
+	        return "This name " + this.noRootName + " is not root";
 	    }
 }

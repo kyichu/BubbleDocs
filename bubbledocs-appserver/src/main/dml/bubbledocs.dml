@@ -32,7 +32,7 @@ class Interval;
 class Content;
 
 class Literal extends Content {
-	int value;
+	int litValue;
 }
 
 class Reference extends Content {

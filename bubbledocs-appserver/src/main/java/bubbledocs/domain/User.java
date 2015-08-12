@@ -1,5 +1,4 @@
 package bubbledocs.domain;
-import java.util.Set;
 
 import bubbledocs.exception.UserNotRootException;
 
