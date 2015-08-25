@@ -1,6 +1,6 @@
 package bubbledocs.domain;
 
-import bubbledocs.exception.UserNotRootException;
+import bubbledocs.exception.BubbleDocsUserNotRootException;
 
 public class User extends User_Base {
     
@@ -11,20 +11,20 @@ public class User extends User_Base {
         setPassword(password);
     }
     
-    public void addUser(String name, String username, String password) throws UserNotRootException{
+    public void addUser(String name, String username, String password) throws BubbleDocsUserNotRootException{
     	if (this.getUsername() == "root"){
     		BubbleDocs.getInstance().addUser(new User(name, username, password));
     	}
     	else
-    		throw new UserNotRootException(this.getUsername());
+    		throw new BubbleDocsUserNotRootException(this.getUsername());
     }
     
-    public void removeUser(String name, String username, String password) throws UserNotRootException{
+    public void removeUser(String name, String username, String password) throws BubbleDocsUserNotRootException{
     	if (this.getUsername() == "root"){
     		BubbleDocs.getInstance().removeUser(new User(name, username, password));
     	}
     	else
-    		throw new UserNotRootException(this.getUsername());
+    		throw new BubbleDocsUserNotRootException(this.getUsername());
     }
     
    public boolean WritePerm(Document doc) {

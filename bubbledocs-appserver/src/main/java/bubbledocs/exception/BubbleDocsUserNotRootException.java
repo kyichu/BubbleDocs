@@ -1,6 +1,6 @@
 package bubbledocs.exception;
 
-public class UserNotRootException extends Exception {
+public class BubbleDocsUserNotRootException extends Exception {
 
 	/**
 	 * 
@@ -8,7 +8,7 @@ public class UserNotRootException extends Exception {
 	private static final long serialVersionUID = 1L;
 	 private String noRootName;
 
-	    public UserNotRootException(String noRootName) {
+	    public BubbleDocsUserNotRootException(String noRootName) {
 	        this.noRootName = noRootName;
 	    }
 

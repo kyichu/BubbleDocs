@@ -1,6 +1,6 @@
 package bubbledocs.exception;
 
-public class CellDoesNotExistException extends Exception {
+public class BubbleDocsValueDividedByZeroException extends Exception {
 
 	/**
 	 * 

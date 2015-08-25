@@ -1,8 +1,8 @@
 package bubbledocs.exception;
 
-public class InvalidContentException extends Exception {
+public class BubbleDocsInvalidContentException extends Exception {
 
-	public InvalidContentException(String string) {
+	public BubbleDocsInvalidContentException(String string) {
 		// TODO Auto-generated constructor stub
 	}
 
